@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.deevvi</groupId>
+    <groupId>com.j4care</groupId>
     <artifactId>device-detector</artifactId>
     <version>1.14.0</version>
 
     <name>Device detector</name>
-    <description>The aim of this library is to fetch as much as possible information from a user-agent string.
+    <description>The aim of this library is to fetch as much as possible information from a user-agent string. Forked by J4care
     </description>
-    <url>https://github.com/deevvicom/device-detector.git</url>
+    <url>https://github.com/j4care/device-detector.git</url>
 
     <licenses>
         <license>
@@ -28,12 +28,18 @@
             <organizationUrl>http://www.deevvi.com</organizationUrl>
             <email>contact@deevvi.com</email>
         </developer>
+	    <developer>
+	      <name>Michael Knapp</name>
+	      <organization>j4care</organization>
+	      <organizationUrl>https://github.com/j4care</organizationUrl>
+            <email>michael.knapp@j4care.com</email>
+	    </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/deevvicom/device-detector.git</connection>
-        <developerConnection>scm:git:git@github.com:deevvicom/device-detector.git</developerConnection>
-        <url>http://github.com/deevvicom/device-detector</url>
+        <connection>scm:git:git://github.com/j4care/device-detector.git</connection>
+        <developerConnection>scm:git:git@github.com:j4care/device-detector.git</developerConnection>
+        <url>http://github.com/j4care/device-detector</url>
     </scm>
 
     <distributionManagement>
