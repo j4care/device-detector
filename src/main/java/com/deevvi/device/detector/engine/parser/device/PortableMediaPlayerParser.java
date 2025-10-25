@@ -58,6 +58,7 @@ public final class PortableMediaPlayerParser extends DeviceParser implements Par
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public PortableMediaPlayer toObject(String key, Object value) {
         Map map = (Map) value;

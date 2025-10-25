@@ -88,6 +88,7 @@ public final class BrowserParser implements Parser, ListLoader<Browser> {
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public Browser toObject(Object rawObject) {
 

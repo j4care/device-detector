@@ -39,6 +39,7 @@ public final class BrowserEngineParser implements Parser, ListLoader<BrowserEngi
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public BrowserEngine toObject(Object rawObject) {
 

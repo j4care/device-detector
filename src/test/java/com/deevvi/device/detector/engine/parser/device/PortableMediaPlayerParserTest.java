@@ -19,6 +19,7 @@ public class PortableMediaPlayerParserTest {
 
     private final PortableMediaPlayerParser parser = new PortableMediaPlayerParser();
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 

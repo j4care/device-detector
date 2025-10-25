@@ -1,16 +1,13 @@
 package com.deevvi.device.detector.engine.parser.device;
 
-import com.google.common.truth.Truth;
-import org.apache.commons.lang3.StringUtils;
-import org.junit.jupiter.api.Test;
-
+import static com.deevvi.device.detector.testsutils.ParserTestUtils.getKeyFromResult;
+import static com.deevvi.device.detector.testsutils.ParserTestUtils.loadRawArray;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import static com.deevvi.device.detector.testsutils.ParserTestUtils.getKeyFromResult;
-import static com.deevvi.device.detector.testsutils.ParserTestUtils.loadRawArray;
+import org.junit.jupiter.api.Test;
+import com.google.common.truth.Truth;
 
 /**
  * Tests for {@link NotebookParser} class.
@@ -19,6 +16,7 @@ public class NotebookParserTest {
 
     private final NotebookParser parser = new NotebookParser();
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 

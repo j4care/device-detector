@@ -15,7 +15,8 @@ public interface ListLoader<T> extends Loader {
      *
      * @return list of {@link T} objects.
      */
-    default List<T> streamToList() {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	default List<T> streamToList() {
 
         Object rawObject = loadFromFile();
         List<T> list = Lists.newArrayList();

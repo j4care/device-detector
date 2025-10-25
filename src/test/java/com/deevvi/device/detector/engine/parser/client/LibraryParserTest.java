@@ -19,6 +19,7 @@ public class LibraryParserTest {
 
     private final LibraryParser parser = new LibraryParser();
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 

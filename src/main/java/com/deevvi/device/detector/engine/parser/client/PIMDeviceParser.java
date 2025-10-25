@@ -1,16 +1,12 @@
 package com.deevvi.device.detector.engine.parser.client;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 import com.deevvi.device.detector.engine.loader.ListLoader;
 import com.deevvi.device.detector.model.client.Client;
 import com.deevvi.device.detector.model.client.PIMDevice;
-import com.google.common.base.Joiner;
-import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 /**
  * Parser to validate if input is a pim application.
@@ -46,6 +42,7 @@ public final class PIMDeviceParser extends ClientParser implements ListLoader<PI
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public PIMDevice toObject(Object rawObject) {
 

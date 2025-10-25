@@ -41,6 +41,7 @@ public final class MobileAppParser extends ClientParser implements ListLoader<Mo
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public MobileApp toObject(Object rawObject) {
 

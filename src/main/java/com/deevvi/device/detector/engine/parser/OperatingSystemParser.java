@@ -1,23 +1,20 @@
 package com.deevvi.device.detector.engine.parser;
 
-import com.deevvi.device.detector.engine.loader.ListLoader;
-import com.deevvi.device.detector.engine.utils.Tuple;
-import com.deevvi.device.detector.model.OperatingSystem;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import org.apache.commons.lang3.StringUtils;
-
+import static com.deevvi.device.detector.engine.utils.ConfigUtils.fetchMapFromFile;
+import static java.util.regex.Pattern.CASE_INSENSITIVE;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static com.deevvi.device.detector.engine.utils.ConfigUtils.fetchMapFromFile;
-import static java.util.regex.Pattern.CASE_INSENSITIVE;
+import org.apache.commons.lang3.StringUtils;
+import com.deevvi.device.detector.engine.loader.ListLoader;
+import com.deevvi.device.detector.engine.utils.Tuple;
+import com.deevvi.device.detector.model.OperatingSystem;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Maps;
 
 /**
  * Parser to determine the operating system.
@@ -74,6 +71,7 @@ public final class OperatingSystemParser implements Parser, ListLoader<Operating
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public OperatingSystem toObject(Object rawObject) {
         Map<String, Object> map = (Map) rawObject;
@@ -86,6 +84,7 @@ public final class OperatingSystemParser implements Parser, ListLoader<Operating
                 .build();
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     private Map<Pattern, String> loadVersions(Map<String, Object> map) {
 
         Map<Pattern, String> versions = Maps.newLinkedHashMap();

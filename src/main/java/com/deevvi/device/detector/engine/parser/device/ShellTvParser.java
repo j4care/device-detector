@@ -26,7 +26,8 @@ public final class ShellTvParser implements Parser, MapLoader<ShellTv> {
     /**
      * {@inheritDoc}
      */
-    @Override
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+   @Override
     public ShellTv toObject(String key, Object value) {
         Map map = (Map) value;
 

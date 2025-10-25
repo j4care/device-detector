@@ -100,7 +100,8 @@ public class DeviceDetectorParserTest {
         runTest("/complete/test-complete-wearable.yml");
     }
 
-    private void runTest(String path) throws IOException {
+   @SuppressWarnings({ "rawtypes" })
+   private void runTest(String path) throws IOException {
 
         List<String> categories = ImmutableList.of("os", "client", "device");
         AtomicInteger index = new AtomicInteger(1);

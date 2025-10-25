@@ -24,7 +24,8 @@ public final class CameraParser extends DeviceParser implements MapLoader<Camera
     /**
      * {@inheritDoc}
      */
-    @Override
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
     public Camera toObject(String key, Object value) {
 
         Map map = (Map) value;

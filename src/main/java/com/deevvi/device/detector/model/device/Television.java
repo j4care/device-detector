@@ -1,11 +1,7 @@
 package com.deevvi.device.detector.model.device;
 
-import com.deevvi.device.detector.model.Model;
-import com.deevvi.device.detector.model.client.BrowserEngine;
-
 import java.util.List;
-import java.util.Map;
-import java.util.regex.Pattern;
+import com.deevvi.device.detector.model.Model;
 
 /**
  * Model for tv parser.

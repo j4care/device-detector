@@ -52,7 +52,8 @@ public final class MobileParser implements Parser, MapLoader<Mobile> {
     /**
      * {@inheritDoc}
      */
-    @Override
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
     public Mobile toObject(String key, Object value) {
         Map map = (Map) value;
         String regex = (String) map.get(REGEX);
@@ -162,9 +163,9 @@ public final class MobileParser implements Parser, MapLoader<Mobile> {
     }
 
     private Map<String, String> buildResult(String userAgent, Tuple<Mobile> t) {
-        final AtomicReference<String> model = new AtomicReference();
-        final AtomicReference<String> brand = new AtomicReference();
-        final AtomicReference<String> deviceType = new AtomicReference();
+        final AtomicReference<String> model = new AtomicReference<>();
+        final AtomicReference<String> brand = new AtomicReference<>();
+        final AtomicReference<String> deviceType = new AtomicReference<>();
         Optional<DeviceInfo> deviceInfo = fetchInfo(t.get(), userAgent);
         if (deviceInfo.isPresent()) {
             DeviceInfo info = deviceInfo.get();

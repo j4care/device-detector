@@ -1,19 +1,17 @@
 package com.deevvi.device.detector.engine.utils;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import org.apache.commons.io.IOUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import org.apache.commons.io.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
-import static com.google.common.base.Charsets.UTF_8;
 
 public final class ConfigUtils {
 
@@ -68,6 +66,6 @@ public final class ConfigUtils {
     }
 
     private static List<String> readFileContent(String filePath) throws IOException {
-        return Splitter.on("\n").splitToList(IOUtils.resourceToString(filePath, UTF_8));
+        return Splitter.on("\n").splitToList(IOUtils.resourceToString(filePath, StandardCharsets.UTF_8));
     }
 }

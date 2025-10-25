@@ -1,18 +1,16 @@
 package com.deevvi.device.detector.testsutils;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.collect.ImmutableMap;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
+import java.util.Map;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.Yaml;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
-
-import static com.google.common.base.Charsets.UTF_8;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.ImmutableMap;
 
 /**
  * Helper class with various methods used for parsers tests.
@@ -56,9 +54,9 @@ public class ParserTestUtils {
     private ParserTestUtils() {
     }
 
-    public static List loadRawArray(String filePath) throws IOException {
+    public static List<?> loadRawArray(String filePath) throws IOException {
 
-        return YAML.load(IOUtils.resourceToString(filePath, UTF_8));
+        return YAML.load(IOUtils.resourceToString(filePath, StandardCharsets.UTF_8));
     }
 
     public static String extractValue(String json, String key) {
@@ -88,7 +86,7 @@ public class ParserTestUtils {
         return deviceTypeMap.getOrDefault(encoding, "");
     }
 
-    public static String getKeyFromResult(Map.Entry entry) {
+    public static String getKeyFromResult(Map.Entry<?,?> entry) {
         String key;
         if (entry.getKey().equals("type")) {
             key = "deviceType";

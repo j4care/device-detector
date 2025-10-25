@@ -1,12 +1,9 @@
 package com.deevvi.device.detector.model.device;
 
-import com.deevvi.device.detector.model.PatternBuilder;
-import com.google.common.base.Preconditions;
-import com.google.common.collect.Lists;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.List;
 import java.util.regex.Pattern;
+import com.deevvi.device.detector.model.PatternBuilder;
+import com.google.common.collect.Lists;
 
 /**
  * Model for mobile parser.

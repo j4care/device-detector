@@ -43,7 +43,8 @@ public final class CarParser implements Parser, MapLoader<Car> {
     /**
      * {@inheritDoc}
      */
-    @Override
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
     public Car toObject(String key, Object value) {
 
         Map map = (Map) value;

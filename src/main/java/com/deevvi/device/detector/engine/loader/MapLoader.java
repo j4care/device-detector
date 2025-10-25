@@ -13,6 +13,7 @@ public interface MapLoader<T> extends Loader {
      *
      * @return list of {@link T} objects.
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     default List<T> streamToList() {
 
         Object rawObject = loadFromFile();

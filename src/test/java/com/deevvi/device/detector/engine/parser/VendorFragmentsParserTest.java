@@ -17,6 +17,7 @@ public class VendorFragmentsParserTest {
 
     private final VendorFragmentsParser parser = new VendorFragmentsParser();
 
+    @SuppressWarnings({ "rawtypes" })
     @Test
     public void testComplete() throws IOException {
 

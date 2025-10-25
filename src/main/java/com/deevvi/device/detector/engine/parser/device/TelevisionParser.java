@@ -80,6 +80,7 @@ public final class TelevisionParser implements Parser, MapLoader<Television> {
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public Television toObject(String key, Object value) {
         Map map = (Map) value;

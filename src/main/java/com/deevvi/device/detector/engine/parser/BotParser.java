@@ -34,6 +34,7 @@ public final class BotParser implements Parser, ListLoader<Bot> {
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public Bot toObject(Object rawObject) {
         Map map = (Map) rawObject;

@@ -1,11 +1,8 @@
 package com.deevvi.device.detector.model.device;
 
+import java.util.List;
 import com.deevvi.device.detector.model.Model;
 import com.google.common.base.Preconditions;
-
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Pattern;
 
 /**
  * Base model for any client.

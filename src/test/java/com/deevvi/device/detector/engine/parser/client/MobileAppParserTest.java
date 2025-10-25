@@ -20,6 +20,7 @@ public class MobileAppParserTest {
 
     private final MobileAppParser parser = new MobileAppParser();
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 
@@ -88,6 +89,7 @@ public class MobileAppParserTest {
         testWithFile("/complete/test-complete-unknown.yml");
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     private void testWithFile(String filePath) throws IOException {
         System.out.println("Test browser parser with file: " + filePath);
         AtomicInteger index = new AtomicInteger(1);

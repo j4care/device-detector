@@ -1,13 +1,12 @@
 package com.deevvi.device.detector.engine.loader;
 
 
-import com.deevvi.device.detector.model.exceptions.DeviceDetectorException;
+import java.nio.charset.StandardCharsets;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.Yaml;
-
-import static com.google.common.base.Charsets.UTF_8;
+import com.deevvi.device.detector.model.exceptions.DeviceDetectorException;
 
 public interface Loader {
 
@@ -38,7 +37,7 @@ public interface Loader {
         String filePath = getFilePath();
         try {
             LOG.info("Reading configuration from file {}", getFilePath());
-            return YAML.load(IOUtils.resourceToString(getFilePath(), UTF_8));
+            return YAML.load(IOUtils.resourceToString(getFilePath(), StandardCharsets.UTF_8));
         } catch (Exception e) {
             throw new DeviceDetectorException(String.format("Unable to read config %s file. Invalid file handler.", filePath));
         }

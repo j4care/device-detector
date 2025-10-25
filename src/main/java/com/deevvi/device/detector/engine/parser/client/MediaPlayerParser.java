@@ -41,6 +41,7 @@ public final class MediaPlayerParser extends ClientParser implements ListLoader<
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public MediaPlayer toObject(Object rawObject) {
 

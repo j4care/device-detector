@@ -43,6 +43,7 @@ public class MobileParserTest {
         runTest("/complete/test-complete-smart_speaker.yml");
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     private void runTest(String path) throws IOException {
 
         AtomicInteger index = new AtomicInteger(1);

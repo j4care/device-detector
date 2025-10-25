@@ -1,11 +1,9 @@
 package com.deevvi.device.detector.model;
 
-import com.google.common.base.Preconditions;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
+import org.apache.commons.lang3.StringUtils;
+import com.google.common.base.Preconditions;
 
 /**
  * Model for operating system.

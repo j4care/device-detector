@@ -1,18 +1,15 @@
 package com.deevvi.device.detector.engine.parser;
 
-import com.deevvi.device.detector.model.PatternBuilder;
-import com.google.common.base.Joiner;
-import com.google.common.collect.Lists;
-import org.apache.commons.lang3.StringUtils;
-
+import static java.util.regex.Pattern.CASE_INSENSITIVE;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-
-import static java.util.regex.Pattern.CASE_INSENSITIVE;
+import org.apache.commons.lang3.StringUtils;
+import com.deevvi.device.detector.model.PatternBuilder;
+import com.google.common.base.Joiner;
+import com.google.common.collect.Lists;
 
 /**
  * Model for parsing an input to generate gadget details.

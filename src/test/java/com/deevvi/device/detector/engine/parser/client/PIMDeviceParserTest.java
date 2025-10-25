@@ -19,6 +19,7 @@ public class PIMDeviceParserTest {
 
     private final PIMDeviceParser parser = new PIMDeviceParser();
 
+    @SuppressWarnings({ "rawtypes" })
     @Test
     public void testComplete() throws IOException {
 

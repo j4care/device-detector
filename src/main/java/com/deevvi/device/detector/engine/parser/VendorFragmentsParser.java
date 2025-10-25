@@ -53,6 +53,7 @@ public final class VendorFragmentsParser implements Parser, PatternBuilder, MapL
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "unchecked" })
     @Override
     public VendorFragments toObject(String key, Object value) {
 

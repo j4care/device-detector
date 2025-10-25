@@ -18,6 +18,7 @@ public class ConsoleParserTest {
 
     private final ConsoleParser parser = new ConsoleParser();
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 

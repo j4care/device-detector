@@ -41,6 +41,7 @@ public final class FeedReaderParser extends ClientParser implements ListLoader<F
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public FeedReader toObject(Object rawObject) {
 

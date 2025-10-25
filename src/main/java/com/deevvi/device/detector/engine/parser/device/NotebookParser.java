@@ -38,6 +38,7 @@ public final class NotebookParser extends DeviceParser implements Parser, MapLoa
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public Notebook toObject(String key, Object value) {
         Map map = (Map) value;

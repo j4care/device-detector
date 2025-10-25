@@ -20,6 +20,7 @@ public class OperatingSystemParserTest {
 
     private OperatingSystemParser parser = new OperatingSystemParser();
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 
@@ -86,6 +87,7 @@ public class OperatingSystemParserTest {
         testWithFile("/complete/test-complete-tv.yml");
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     private void testWithFile(String filePath) throws IOException {
         System.out.println("Test OS parser with file: " + filePath);
         final AtomicInteger index = new AtomicInteger(1);

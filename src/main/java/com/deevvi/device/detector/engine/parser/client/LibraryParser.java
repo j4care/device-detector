@@ -41,6 +41,7 @@ public final class LibraryParser extends ClientParser implements ListLoader<Libr
     /**
      * {@inheritDoc}
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public Library toObject(Object rawObject) {
 

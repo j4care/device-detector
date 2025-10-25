@@ -29,6 +29,7 @@ public class BrowserParserTest {
         assertThrows(NullPointerException.class, () -> new BrowserParser(null));
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 
@@ -61,6 +62,7 @@ public class BrowserParserTest {
     }
 
     //Single test, useful for debugging
+    @SuppressWarnings({ "rawtypes" })
     @Test
     public void testSingleTest() throws IOException {
 
@@ -122,13 +124,14 @@ public class BrowserParserTest {
         testWithFile("/complete/test-complete-unknown.yml");
     }
 
-    private String getKey(Map.Entry entry){
+    private String getKey(Map.Entry<?,?> entry){
         if (entry.getKey().equals("family")) {
             return "browserFamily";
         }
         return getKeyFromResult(entry);
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     private void testWithFile(String filePath) throws IOException {
         System.out.println("Test browser parser with file: " + filePath);
         final AtomicInteger index = new AtomicInteger(1);

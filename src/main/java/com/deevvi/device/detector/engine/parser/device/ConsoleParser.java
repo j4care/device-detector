@@ -41,7 +41,8 @@ public final class ConsoleParser extends DeviceParser implements Parser, MapLoad
     /**
      * {@inheritDoc}
      */
-    @Override
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
     public Console toObject(String key, Object value) {
 
         Map map = (Map) value;

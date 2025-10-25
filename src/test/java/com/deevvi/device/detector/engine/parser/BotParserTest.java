@@ -1,17 +1,14 @@
 package com.deevvi.device.detector.engine.parser;
 
-import com.google.common.collect.ImmutableList;
-import org.apache.commons.lang3.StringUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-
 import static com.deevvi.device.detector.testsutils.ParserTestUtils.loadRawArray;
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
+import java.io.IOException;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
+import org.apache.commons.lang3.StringUtils;
+import org.junit.jupiter.api.Test;
+import com.google.common.collect.ImmutableList;
 
 /**
  * Tests for {@link BotParser} class.
@@ -20,6 +17,7 @@ public class BotParserTest {
 
     private final BotParser parser = new BotParser();
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 
@@ -56,7 +54,7 @@ public class BotParserTest {
                 });
     }
 
-    private String fetchKey(Map.Entry entry) {
+    private String fetchKey(Map.Entry<?,?> entry) {
         String key;
         if (entry.getKey().equals("type")) {
             key = "deviceType";

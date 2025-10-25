@@ -20,6 +20,7 @@ public class MediaPlayerParserTest {
 
     private final MediaPlayerParser parser = new MediaPlayerParser();
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 

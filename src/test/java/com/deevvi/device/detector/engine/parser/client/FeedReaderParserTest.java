@@ -19,6 +19,7 @@ public class FeedReaderParserTest {
 
     private final FeedReaderParser parser = new FeedReaderParser();
 
+    @SuppressWarnings({ "rawtypes" })
     @Test
     public void testComplete() throws IOException {
 

@@ -17,6 +17,7 @@ public class CameraParserTest {
 
     private final CameraParser parser = new CameraParser();
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Test
     public void testComplete() throws IOException {
 
